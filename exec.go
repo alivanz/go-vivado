@@ -51,7 +51,7 @@ func execTcl(location string) (*exec.Cmd, io.WriteCloser, error) {
 	if err != nil {
 		panic(err)
 	}
-	cmd.Stdout = os.Stdout
+	cmd.Stdout = stdout
 	err = cmd.Start()
 	if err != nil {
 		return nil, nil, err
